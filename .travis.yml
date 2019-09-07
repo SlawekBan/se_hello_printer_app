@@ -10,3 +10,7 @@ script:
   -  make lint
   -  make docker_build
   -  make docker_push
+deploy:
+  provider:  heroku
+  app:  immense-journey-60398
+  api_key:  ${HEROKU_API_KEY}
