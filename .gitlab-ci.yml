@@ -14,5 +14,5 @@ docker:
   services:
     - docker:dind
   stage: docker_build
-  scrpit:
+  script:
     - docker build -t myapp .
