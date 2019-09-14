@@ -1,7 +1,9 @@
 import unittest
+import jmespath
 from hello_world import app
 from hello_world.formater import SUPPORTED
 
+imie = "Slawek B"
 
 class FlaskrTestCase(unittest.TestCase):
     def setUp(self):
@@ -16,3 +18,5 @@ class FlaskrTestCase(unittest.TestCase):
         rv = self.app.get('/?output=json')
         self.assertEquals('{ "imie":"Slawek B", "mgs":"Hello World!"}',
                           rv.data)
+        actual = jmespath.search("imie", self)
+        print(actual)

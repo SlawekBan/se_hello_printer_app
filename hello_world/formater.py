@@ -3,6 +3,7 @@ PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
 JSON = "json"
+#from lxml import etree
 
 SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 
@@ -23,6 +24,9 @@ def get_formatted(msg, imie, format):
 def format_to_json(msg, imie):
     return ('{ "imie":"' + imie + '", "mgs":"' +
             msg + '"}')
+
+#def test_xml(msg, imie):
+
 
 
 def plain_text(msg, imie):
